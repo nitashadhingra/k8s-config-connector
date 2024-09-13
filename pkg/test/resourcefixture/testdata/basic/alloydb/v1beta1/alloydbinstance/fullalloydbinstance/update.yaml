@@ -24,7 +24,7 @@ spec:
   databaseFlags:
     enable_google_adaptive_autovacuum: "off"
   machineConfig:
-    cpuCount: 4
+    cpuCount: 2
   resourceID: alloydbinstance${uniqueId}
   networkConfig:
     enablePublicIp: false
@@ -35,11 +35,11 @@ spec:
     recordApplicationTags: false
     recordClientAddress: false
   observabilityConfig:
+    enabled: true
     preserveComments: false
     trackWaitEvents: true
     trackWaitEventTypes: true
     maxQueryStringLength: 10240
     recordApplicationTags: false
     queryPlansPerMinute: 200
-    trackActiveQueries: false
-    trackClientAddress: false
+    trackActiveQueries: true

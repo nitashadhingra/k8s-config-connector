@@ -15,23 +15,20 @@
 apiVersion: alloydb.cnrm.cloud.google.com/v1beta1
 kind: AlloyDBCluster
 metadata:
-  name: ndc2-kcc
+  name: ndc-test-kcc
 spec:
-  location: us-west1
+  location: us-central1
   networkConfig:
     networkRef: 
-      name: default
+      name: alloydbcluster-dep-regular
   projectRef:
-    external: ego-duet
+    external: nitashadhingra-playground
   automatedBackupPolicy:
     backupWindow: 3600s
-    encryptionConfig:
-      kmsKeyNameRef: 
-        name: alloydbcluster-dep-regular
     enabled: true
     labels:
       source: kcc
-    location: asia-south2
+    location: us-central1
     timeBasedRetention:
       retentionPeriod: 43200s
     weeklySchedule:
@@ -41,9 +38,6 @@ spec:
           minutes: 0
           seconds: 0
           nanos: 0
-  encryptionConfig:
-    kmsKeyNameRef: 
-      name: alloydbcluster-dep-regular
   maintenanceUpdatePolicy:
     maintenanceWindows:
       - day: WEDNESDAY

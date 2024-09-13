@@ -22,7 +22,7 @@ spec:
     networkRef:
       name: computenetwork-${uniqueId}
   projectRef:
-    external: ${projectId}
+    external: nitashadhingra-playground
 
   automatedBackupPolicy:
     backupWindow: 3600s

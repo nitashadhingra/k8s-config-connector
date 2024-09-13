@@ -22,7 +22,7 @@ spec:
     networkRef: 
       name: computenetwork-${uniqueId}
   projectRef:
-    external: ${projectId}
+    external: nitashadhingra-playground
 
   initialUser:
     user: postgres
@@ -32,9 +32,6 @@ spec:
   automatedBackupPolicy:
     backupWindow: 7200s
     enabled: true
-    encryptionConfig:
-      kmsKeyNameRef: 
-        name: kmscryptokey-${uniqueId}
     labels:
       source: kcc-test 
     location: us-central1
@@ -46,9 +43,4 @@ spec:
         - hours: 4
           minutes: 0
           seconds: 0
-          nanos: 0
-
-  encryptionConfig:
-      kmsKeyNameRef: 
-        name: kmscryptokey-${uniqueId}
-          
+          nanos: 0      
