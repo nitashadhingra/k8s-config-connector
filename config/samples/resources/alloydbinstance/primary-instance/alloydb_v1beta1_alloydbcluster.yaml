@@ -17,9 +17,18 @@ kind: AlloyDBCluster
 metadata:
   name: alloydbinstance-dep-primary
 spec:
+<<<<<<< HEAD
   location: asia-east1
   networkConfig:
     networkRef: 
       name: alloydbinstance-dep-primary
   projectRef:
     external: ${PROJECT_ID?}
+=======
+  location: us-central1
+  networkConfig:
+    networkRef: 
+      name: alloydbcluster-dep-regular
+  projectRef:
+    external: nitashadhingra-playground
+>>>>>>> 3a52e193c91eca7cb889748dc9c84d209803fa51
