@@ -32,6 +32,7 @@ spec:
     recordApplicationTags: false
     recordClientAddress: false
   observabilityConfig:
+    enabled: false
     preserveComments: false
     trackWaitEvents: true
     trackWaitEventTypes: true
@@ -39,5 +40,3 @@ spec:
     recordApplicationTags: false
     queryPlansPerMinute: 200
     trackActiveQueries: false
-    trackClientAddress: false
-
