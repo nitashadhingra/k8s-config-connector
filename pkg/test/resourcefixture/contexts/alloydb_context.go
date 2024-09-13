@@ -43,7 +43,7 @@ func init() {
 	// expected error, instead got 'nil'
 	resourceContextMap["basicalloydbsecondaryinstance"] = ResourceContext{
 		ResourceKind:       "AlloyDBInstance",
-		SkipDriftDetection: false,
+		SkipDriftDetection: true,
 		SkipDelete:         true,
 	}
 }
