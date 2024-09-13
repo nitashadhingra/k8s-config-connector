@@ -28,7 +28,7 @@ spec:
     user: postgres
     password:
       value: Postgres123
-    
+      
   automatedBackupPolicy:
     backupWindow: 7200s
     enabled: true
@@ -49,6 +49,6 @@ spec:
           nanos: 0
 
   encryptionConfig:
-      kmsKeyNameRef:
+      kmsKeyNameRef: 
         name: kmscryptokey-${uniqueId}
           
