@@ -25,10 +25,13 @@ spec:
     external: ${PROJECT_ID?}
   automatedBackupPolicy:
     backupWindow: 3600s
+    encryptionConfig:
+      kmsKeyNameRef:
+        name: alloydbcluster-dep-regular
     enabled: true
     labels:
       source: kcc
-    location: us-central1
+    location: asia-south2
     timeBasedRetention:
       retentionPeriod: 43200s
     weeklySchedule:
@@ -39,8 +42,8 @@ spec:
           seconds: 0
           nanos: 0
   encryptionConfig:
-      kmsKeyNameRef: 
-        name: alloydbcluster-dep-regular
+    kmsKeyNameRef: 
+      name: alloydbcluster-dep-regular
   maintenanceUpdatePolicy:
     maintenanceWindows:
       - day: WEDNESDAY
