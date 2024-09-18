@@ -1404,15 +1404,15 @@ func expandAlloydbInstanceObservabilityConfigTrackWaitEventTypes(v interface{}, 
 	return v, nil
 }
 
-func expandAlloydbInstanceQueryInsightsConfigQueryPlansPerMinute(v interface{}, d tpgresource.TerraformResourceData, config *transport_tpg.Config) (interface{}, error) {
+func expandAlloydbInstanceObservabilityConfigQueryPlansPerMinute(v interface{}, d tpgresource.TerraformResourceData, config *transport_tpg.Config) (interface{}, error) {
 	return v, nil
 }
 
-func expandAlloydbInstanceQueryInsightsConfigMaxQueryStringLength(v interface{}, d tpgresource.TerraformResourceData, config *transport_tpg.Config) (interface{}, error) {
+func expandAlloydbInstanceObservabilityConfigMaxQueryStringLength(v interface{}, d tpgresource.TerraformResourceData, config *transport_tpg.Config) (interface{}, error) {
 	return v, nil
 }
 
-func expandAlloydbInstanceQueryInsightsConfigRecordApplicationTags(v interface{}, d tpgresource.TerraformResourceData, config *transport_tpg.Config) (interface{}, error) {
+func expandAlloydbInstanceObservabilityConfigRecordApplicationTags(v interface{}, d tpgresource.TerraformResourceData, config *transport_tpg.Config) (interface{}, error) {
 	return v, nil
 }
 
