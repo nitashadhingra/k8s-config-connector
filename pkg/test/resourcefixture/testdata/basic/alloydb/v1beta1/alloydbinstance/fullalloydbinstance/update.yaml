@@ -24,7 +24,7 @@ spec:
   databaseFlags:
     enable_google_adaptive_autovacuum: "off"
   machineConfig:
-    cpuCount: 2
+    cpuCount: 4
   resourceID: alloydbinstance${uniqueId}
   networkConfig:
     enablePublicIp: false
