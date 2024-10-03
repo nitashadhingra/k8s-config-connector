@@ -544,18 +544,32 @@ spec:
     authorizedExternalNetworks:
     - cidrRange: 8.8.8.8/30
     - cidrRange: 8.8.4.4/30
+  queryInsightsConfig:
+    queryPlansPerMinute: 5
+    queryStringLength: 512
+    recordApplicationTags: false
+    recordClientAddress: false
+  observabilityConfig:
+    enabled: true
+    preserveComments: false
+    trackWaitEvents: true
+    trackWaitEventTypes: true
+    maxQueryStringLength: 10240
+    recordApplicationTags: false
+    queryPlansPerMinute: 20
+    trackActiveQueries: false
 ---
 apiVersion: alloydb.cnrm.cloud.google.com/v1beta1
 kind: AlloyDBCluster
 metadata:
   name: alloydbinstance-dep-primary
 spec:
-  location: asia-east1
+  location: us-central1
   networkConfig:
     networkRef: 
       name: alloydbinstance-dep-primary
   projectRef:
-    external: ${PROJECT_ID?}
+    external: nitashadhingra-playground
 ---
 apiVersion: compute.cnrm.cloud.google.com/v1beta1
 kind: ComputeAddress
@@ -628,6 +642,19 @@ spec:
     cpuCount: 2
   readPoolConfig:
     nodeCount: 3
+  queryInsightsConfig:
+    queryPlansPerMinute: 5
+    queryStringLength: 1024
+    recordApplicationTags: false
+    recordClientAddress: false
+  observabilityConfig:
+    preserveComments: false
+    trackWaitEvents: true
+    trackWaitEventTypes: true
+    maxQueryStringLength: 10240
+    recordApplicationTags: false
+    queryPlansPerMinute: 200
+    trackActiveQueries: false
 ---
 apiVersion: alloydb.cnrm.cloud.google.com/v1beta1
 kind: AlloyDBCluster
