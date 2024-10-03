@@ -219,7 +219,7 @@ can have regional availability (nodes are present in 2 or more zones in a region
 				Computed:    true,
 				Description: `Time the Instance was updated in UTC.`,
 			},
-					},
+		},
 		UseJSONNumber: true,
 	}
 }
@@ -293,7 +293,7 @@ func resourceAlloydbInstanceCreate(d *schema.ResourceData, meta interface{}) err
 	} else if v, ok := d.GetOkExists("network_config"); !tpgresource.IsEmptyValue(reflect.ValueOf(networkConfigProp)) && (ok || !reflect.DeepEqual(v, networkConfigProp)) {
 		obj["networkConfig"] = networkConfigProp
 	}
-	
+
 	url, err := tpgresource.ReplaceVars(d, config, "{{AlloydbBasePath}}{{cluster}}/instances?instanceId={{instance_id}}")
 	if err != nil {
 		return err
@@ -428,7 +428,7 @@ func resourceAlloydbInstanceRead(d *schema.ResourceData, meta interface{}) error
 	if err := d.Set("public_ip_address", flattenAlloydbInstancePublicIpAddress(res["publicIpAddress"], d, config)); err != nil {
 		return fmt.Errorf("Error reading Instance: %s", err)
 	}
-	
+
 	return nil
 }
 
@@ -497,7 +497,7 @@ func resourceAlloydbInstanceUpdate(d *schema.ResourceData, meta interface{}) err
 	} else if v, ok := d.GetOkExists("network_config"); !tpgresource.IsEmptyValue(reflect.ValueOf(v)) && (ok || !reflect.DeepEqual(v, networkConfigProp)) {
 		obj["networkConfig"] = networkConfigProp
 	}
-	
+
 	url, err := tpgresource.ReplaceVars(d, config, "{{AlloydbBasePath}}{{cluster}}/instances/{{instance_id}}")
 	if err != nil {
 		return err
