@@ -28,6 +28,7 @@ spec:
   resourceID: alloydbinstance${uniqueId}
   networkConfig:
     enablePublicIp: false
+    enableOutboundPublicIp: false
     authorizedExternalNetworks: []
   queryInsightsConfig:
     queryPlansPerMinute: 5
@@ -41,5 +42,5 @@ spec:
     trackWaitEventTypes: true
     maxQueryStringLength: 10240
     recordApplicationTags: false
-    queryPlansPerMinute: 200
+    queryPlansPerMinute: 20
     trackActiveQueries: true

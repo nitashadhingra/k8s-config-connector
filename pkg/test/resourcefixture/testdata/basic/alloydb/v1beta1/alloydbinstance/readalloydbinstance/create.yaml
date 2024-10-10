@@ -38,5 +38,5 @@ spec:
     trackWaitEventTypes: true
     maxQueryStringLength: 10240
     recordApplicationTags: false
-    queryPlansPerMinute: 200
+    queryPlansPerMinute: 20
     trackActiveQueries: false
